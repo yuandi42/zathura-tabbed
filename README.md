@@ -7,7 +7,7 @@ Now you can simply open your favourite simple document viewer in tabs!
 ## Dependencies
 
 * [zathura](https://pwmt.org/projects/zathura/) and
-  [tabbed](https://tools.suckless.org/tabbed/); (Isn't that obviously?)
+  [tabbed](https://tools.suckless.org/tabbed/); (Isn't that obvious?)
 * [seturgent](https://codemadness.org/git/seturgent/file/README.html): A simple
   tool to set urgent hint to a X window which supports ICCCM;
 * A POSIX-compatible shell.
