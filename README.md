@@ -15,13 +15,13 @@ Now you can simply open your favourite simple document viewer in tabs!
 
 ## Installation
 
-```
+```sh
 git clone https://github.com/yuandi42/zathura-tabbed.git
 cd zathura-tabbed
 make install
 ```
 
-Use root previllege if you want.
+or simply copy the shell script to your `PATH`.
 
 ## Usage
 
@@ -32,3 +32,9 @@ All the options are simply passed to `zathura`.
 ## TODO
 
 * Find a method to detach zarthura tabs.
+
+
+## Credits
+
+* Thanks mtikekar for his [work](https://github.com/mtikekar/zathura-tabbed)
+  since this script is basically a modification of his.
