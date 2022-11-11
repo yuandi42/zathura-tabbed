@@ -1,0 +1,60 @@
+.TH ZATHURA-TABBED 1
+.SH NAME
+zathura-tabbed \- open
+.B zathura
+in tabs using
+.B tabbed
+.SH SYNOPSIS
+.B zathura-tabbed
+[
+.I OPTIONS
+]... [
+.I FILES
+]
+.SH DESCRIPTION
+.B zathura-tabbed
+opens
+.B zathura
+as a new tab in a certain
+.B tabbed
+window with a certain WM_CLASS
+.B zathura-tabbed
+, and if file names are given, open those files in zathura tabs in tabbed.
+
+.B zathura-tabbed
+can also pass on all options to
+.B zathura.
+
+.B zathura-tabbed
+is just a simple POSIX shell script, and you can easily modify it to satisify your need.
+.SH COMMANDS
+.TP
+.B zathura-tabbed
+open an empty
+.B zathura
+tab in tabbed.
+.TP
+.B zathura-tabbed foo.pdf bar.epub
+open
+.B foo.pdf
+and
+.B bar.epub
+as
+.B zathura
+tabs in one
+.B tabbed
+window.
+.TP
+.B
+-*
+See the
+.B
+zathura
+manual for additional options that can be used.
+.SH AUTHORS
+Written by yuandi42 <realyuandi42@gmail.com>.
+.SH LICENSE
+GPLv3
+.SH SEE ALSO
+.BR zathura (1),
+.BR tabbed (1)
