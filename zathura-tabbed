@@ -10,11 +10,11 @@ wmclass="zathura-tabbed"
 if [ -r "$xidfile" ] && xid=$(cat "$xidfile") && xprop -id "$xid" WM_CLASS 2> /dev/null | grep -q "$wmclass";
 then
     zathura -e "$xid" "$@" &> /dev/null &
-
-    #set urgent hint to the window. support ICCCM.
-    # see more in https://codemadness.org/git/seturgent/file/README.html
-    seturgent "$xid"
 else
     xid=$(tabbed -cdn "$wmclass" -p -1 -r 2 zathura -e "" "$@" 2> /dev/null)
     echo "$xid" > "$xidfile"
 fi
+
+#set urgent hint to the window. support ICCCM.
+# see more in https://codemadness.org/git/seturgent/file/README.html
+seturgent "$xid"
