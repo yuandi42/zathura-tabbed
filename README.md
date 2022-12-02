@@ -29,10 +29,11 @@ or simply copy the shell script to your `PATH`.
 
 All the options are simply passed to `zathura`.
 
-## TODO
+## NOTE
 
-* Find a method to detach zarthura tabs.
-
+For those who refuses to install `seturgent`, you can modify the script, use
+tools like `xdotool` or `wmctrl` to set urgent hint as long as your X window
+manager supports EWMH.
 
 ## Credits
 
