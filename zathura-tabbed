@@ -5,6 +5,7 @@
 
 xidfile="/run/user/"$(id -u)"/zathura-tabbed.xid"
 wmclass="zathura-tabbed"
+session_cache=$XDG_CONFIG_HOME/zathura/cache
 
 # check if a tabbed window is open
 if [ -r "$xidfile" ] && xid=$(cat "$xidfile") && xprop -id "$xid" WM_CLASS 2> /dev/null | grep -q "$wmclass";
@@ -13,6 +14,7 @@ then
 else
     xid=$(tabbed -scdn "$wmclass" -p -1 -r 2 zathura -e "" 2> /dev/null)
     echo "$xid" > "$xidfile"
+    eval "zathura -e $xid $(cat $session_cache) &> /dev/null &"
 fi
 
 zathura -e "$xid" "$@" &> /dev/null &
