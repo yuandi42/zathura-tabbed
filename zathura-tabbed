@@ -15,4 +15,4 @@ else
     echo "$xid" > "$xidfile"
 fi
 
-zathura -e "$xid" "$@" &> /dev/null &
+setsid --fork zathura -e "$xid" "$@" > /dev/null 2>&1
